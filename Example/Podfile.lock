@@ -1,0 +1,35 @@
+PODS:
+  - BCJPrivateProtocolAlert (1.0.0):
+    - Masonry
+    - YYText
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Masonry (1.1.0)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - BCJPrivateProtocolAlert (from `../`)
+  - FBSnapshotTestCase
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+    - Masonry
+    - YYText
+
+EXTERNAL SOURCES:
+  BCJPrivateProtocolAlert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BCJPrivateProtocolAlert: e43b1949114fd40888e3469d824451a3d8242bb0
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 193c61a29cbe4221874dfaf5e0a210eb574c2ecf
+
+COCOAPODS: 1.11.3

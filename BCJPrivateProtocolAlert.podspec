@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BCJPrivateProtocolAlert'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BCJPrivateProtocolAlert.'
+  s.summary          = '模块块化 隐私政策'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+       模块块化 隐私政策
                        DESC
 
-  s.homepage         = 'https://github.com/oauth2/BCJPrivateProtocolAlert'
+  s.homepage         = 'https://github.com/Alerson-Z'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'oauth2' => 'zhsworkmail@163.com' }
-  s.source           = { :git => 'https://github.com/oauth2/BCJPrivateProtocolAlert.git', :tag => s.version.to_s }
+  s.author           = { 'alerson' => 'zhsworkmail@163.com' }
+  s.source           = { :git => 'https://github.com/Alerson-Z/BJCPrivateProtocolAlert.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -38,5 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'Masonry'
+   s.dependency 'YYText'
 end

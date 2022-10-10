@@ -7,14 +7,20 @@
 //
 
 #import "BCJAppDelegate.h"
-
+#import "BCJPrivateProtocolAlert.h"
 @implementation BCJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BCJPrivateProtocolAlert showWithModel:[ BJCPrivateProtocolModel new ] block:^{
+//             初始化
+        
+    } ];
     // Override point for customization after application launch.
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

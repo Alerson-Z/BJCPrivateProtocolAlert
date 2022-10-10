@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1A939411833FB48C403038AC /* Pods_BCJPrivateProtocolAlert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCJPrivateProtocolAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AE03F5756E7102EC81FA80E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2AE03F5756E7102EC81FA80E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		451BA25BDE0732F26861F995 /* Pods-BCJPrivateProtocolAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCJPrivateProtocolAlert_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BCJPrivateProtocolAlert_Tests/Pods-BCJPrivateProtocolAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BCJPrivateProtocolAlert_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCJPrivateProtocolAlert_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,9 +64,9 @@
 		964DBDC4E4C1B024CF3C7C4A /* Pods_BCJPrivateProtocolAlert_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BCJPrivateProtocolAlert_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C85C44A245F135CB887AA78 /* Pods-BCJPrivateProtocolAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCJPrivateProtocolAlert_Tests.release.xcconfig"; path = "Target Support Files/Pods-BCJPrivateProtocolAlert_Tests/Pods-BCJPrivateProtocolAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9CFE03DB826D45C923588721 /* Pods-BCJPrivateProtocolAlert_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCJPrivateProtocolAlert_Example.release.xcconfig"; path = "Target Support Files/Pods-BCJPrivateProtocolAlert_Example/Pods-BCJPrivateProtocolAlert_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BA96FA32AAB5FC91DF5F95A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BA96FA32AAB5FC91DF5F95A5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C31D2F3429517F79D2C8A3FA /* Pods-BCJPrivateProtocolAlert_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BCJPrivateProtocolAlert_Example.debug.xcconfig"; path = "Target Support Files/Pods-BCJPrivateProtocolAlert_Example/Pods-BCJPrivateProtocolAlert_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F15645B2DE02AD2F25D0FCFE /* BCJPrivateProtocolAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BCJPrivateProtocolAlert.podspec; path = ../BCJPrivateProtocolAlert.podspec; sourceTree = "<group>"; };
+		F15645B2DE02AD2F25D0FCFE /* BCJPrivateProtocolAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BCJPrivateProtocolAlert.podspec; path = ../BCJPrivateProtocolAlert.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				451BA25BDE0732F26861F995 /* Pods-BCJPrivateProtocolAlert_Tests.debug.xcconfig */,
 				9C85C44A245F135CB887AA78 /* Pods-BCJPrivateProtocolAlert_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,10 +304,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BCJPrivateProtocolAlert_Example/Pods-BCJPrivateProtocolAlert_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BCJPrivateProtocolAlert/BCJPrivateProtocolAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BCJPrivateProtocolAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
