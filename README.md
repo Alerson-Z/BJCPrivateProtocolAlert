@@ -3,11 +3,9 @@
 | ![image](https://github.com/Alerson-Z/BJCPrivateProtocolAlert/raw/main/BCJPrivateProtocolAlert/Assets/image.gif) | ![image](https://github.com/Alerson-Z/BJCPrivateProtocolAlert/raw/main/BCJPrivateProtocolAlert/Assets/image) |
 |---|--:|
 ### 只有两个类： 
-BCJPrivateProtocolAlert ： 
-控制类
+BCJPrivateProtocolAlert ： 控制类
 
-BJCPrivateProtocolModel  ： 
-保存协议跳转地址和应用名称
+BJCPrivateProtocolModel  ：  保存协议跳转地址和应用名称
 
 使用方式：
 ```
