@@ -68,9 +68,9 @@
         self.privacyPolicyURL = [NSURL URLWithString:@"https://www.juejin.com"];
         NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
         self.appName = [infoDictionary objectForKey:@"CFBundleDisplayName"];
-        self.sureButton.layer.masksToBounds = true;
-        self.sureButton.layer.cornerRadius = self.sureButton.frame.size.height/2.0;
-        self.sureButton.backgroundColor = [UIColor colorWithRed:83.0/255.0 green:162/255.0 blue:255.0/255.0 alpha:1];
+        self.conformButton.layer.masksToBounds = true;
+        self.conformButton.layer.cornerRadius = self.conformButton.frame.size.height/2.0;
+        self.conformButton.backgroundColor = [UIColor colorWithRed:83.0/255.0 green:162/255.0 blue:255.0/255.0 alpha:1];
     }
     return self;
 }
@@ -118,8 +118,8 @@
     }];
     
     // Sure Button
-    [self.containerView addSubview:self.sureButton];
-    [self.sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.containerView addSubview:self.conformButton];
+    [self.conformButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.descLabel.mas_bottom).offset(30.0);
         make.centerX.equalTo(self.containerView);
     }];
@@ -127,9 +127,9 @@
     // Cancel Button
     [self.containerView addSubview:self.cancelButton];
     [self.cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(self.sureButton);
-        make.top.equalTo(self.sureButton.mas_bottom).offset(5);
-        make.centerX.equalTo(self.sureButton);
+        make.size.equalTo(self.conformButton);
+        make.top.equalTo(self.conformButton.mas_bottom).offset(5);
+        make.centerX.equalTo(self.conformButton);
         make.bottom.equalTo(self.containerView.mas_bottom).offset(-10);
     }];
     
@@ -210,7 +210,7 @@
 
         NSRange range1 = [contentString rangeOfString:@"《用户协议》"];
         NSRange range2 = [contentString rangeOfString:@"《隐私政策》"];
-        
+      
         kWeakSelf(self);
         [attrString yy_setTextHighlightRange:range1 color:self.highlightColor backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
             kStrongSelf(self);
@@ -239,22 +239,22 @@
     return _descLabel;
 }
 
--(UIButton *)sureButton{
-    if(!_sureButton){
+-(UIButton *)conformButton{
+    if(!_conformButton){
         CGSize size = CGSizeMake(270, 40);
-        _sureButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+        _conformButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
                 
-        [_sureButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_conformButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(size.width, size.height));
         }];
         
-        [_sureButton addTarget:self action:@selector(confirmButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [_conformButton addTarget:self action:@selector(confirmButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
-        [_sureButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-        _sureButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        [_sureButton setTitle:@"同意，继续使用" forState:UIControlStateNormal];
+        [_conformButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        _conformButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        [_conformButton setTitle:@"同意，继续使用" forState:UIControlStateNormal];
     }
-    return _sureButton;
+    return _conformButton;
 }
 
 
@@ -274,7 +274,7 @@
 
 //### 给按钮设置渐变色
 //```
-//CGSize size = alert.sureButton.frame.size;
+//CGSize size = alert.conformButton.frame.size;
 //CAGradientLayer *gl = [CAGradientLayer layer];
 //gl.frame = CGRectMake(0,0,size.width,size.height);
 //gl.startPoint = CGPointMake(0, 0.5);
@@ -284,10 +284,10 @@
 //gl.cornerRadius = size.height/2.0;
 //gl.masksToBounds = true;
 //
-//alert.sureButton.layer.shadowColor = [UIColor colorWithRed:235/255.0 green:93/255.0 blue:143/255.0 alpha:0.3].CGColor;
-//alert.sureButton.layer.shadowOffset = CGSizeMake(0,6);
-//alert.sureButton.layer.shadowRadius = size.height/2.0;
-//alert.sureButton.layer.shadowOpacity = 0;
-//[alert.sureButton.layer insertSublayer:gl below:alert.sureButton.titleLabel.layer];
+//alert.conformButton.layer.shadowColor = [UIColor colorWithRed:235/255.0 green:93/255.0 blue:143/255.0 alpha:0.3].CGColor;
+//alert.conformButton.layer.shadowOffset = CGSizeMake(0,6);
+//alert.conformButton.layer.shadowRadius = size.height/2.0;
+//alert.conformButton.layer.shadowOpacity = 0;
+//[alert.conformButton.layer insertSublayer:gl below:alert.conformButton.titleLabel.layer];
 //
 //```

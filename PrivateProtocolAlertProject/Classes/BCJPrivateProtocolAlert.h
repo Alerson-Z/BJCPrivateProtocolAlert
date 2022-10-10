@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BCJPrivateProtocolAlert : UIViewController
 
 // 自定义确定按钮的样式
-@property (nonatomic,strong) UIButton *sureButton;/**< 确认按钮 */
+@property (nonatomic,strong) UIButton *conformButton;/**< 确认按钮 */
 
 @property (nonatomic,strong) NSString *appName;/**< 设置应用名称 */
 @property (nonatomic,strong) UIColor *nomalTextColor;/**<  设置文字颜色 Default: 333333 */
