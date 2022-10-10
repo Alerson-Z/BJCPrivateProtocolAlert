@@ -1,6 +1,6 @@
 # BJCPrivateProtocolAlert
 #### 隐私协议-模块化
-|  | ![image](BCJPrivateProtocolAlert/assets/image.png) |
+|  | ![image](BCJPrivateProtocolAlert/assets/image) |
 |---|--:|
 ### 只有两个类： 
 BCJPrivateProtocolAlert ： 
