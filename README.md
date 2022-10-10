@@ -28,3 +28,10 @@ BJCPrivateProtocolModel  ：
     self.window.rootViewController = [ViewController new];
 }
 ```
+###  model 内部
+只有三个属性
+```
+@property (nonatomic,strong) NSURL *userAgreementURL;/* 用户协议地址 */
+@property (nonatomic,strong) NSURL *privacyPolicyURL;/* 隐私政策地址 */
+@property (nonatomic,strong) NSString *appName;/*设置应用名称 */
+```
