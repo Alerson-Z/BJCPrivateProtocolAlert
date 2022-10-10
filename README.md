@@ -1,6 +1,7 @@
 # BJCPrivateProtocolAlert
 #### 隐私协议-模块化
-
+| ![image](assets/image.gif) | ![image](assets/image.png) |
+|---|--:|
 ### 只有两个类： 
 BCJPrivateProtocolAlert ： 
 控制类
@@ -33,5 +34,5 @@ BJCPrivateProtocolModel  ：
 ```
 @property (nonatomic,strong) NSURL *userAgreementURL;/* 用户协议地址 */
 @property (nonatomic,strong) NSURL *privacyPolicyURL;/* 隐私政策地址 */
-@property (nonatomic,strong) NSString *appName;/*设置应用名称 */
+@property (nonatomic,strong) NSString *appName;/*设置应用名称 */ 
 ```
